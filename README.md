@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ImeEdet
-- 👀 I’m interested in Front-End Development
-- 🌱 I’m currently learning Javascript
+- 👀 I’m interested in Front-End Development and Machine Learning
+- 🌱 I’m currently learning Python
 - 💞️ I’m looking to collaborate on anything
 - 📫 How to reach me at my school e-mail 202100001@topfaith.edu.ng
 - 😄 Pronouns: She/Her
