@@ -163,7 +163,7 @@ export const skillCategories: { title: string; blurb: string; skills: string[] }
       "HTML",
       "CSS",
       "Front-End Development",
-      "AI-Assisted Application Prototyping",
+      "AI-Assisted Development",
     ],
   },
   {
