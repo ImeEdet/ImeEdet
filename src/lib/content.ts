@@ -180,6 +180,6 @@ export const contact = {
   email: "menobltd@gmail.com",
   linkedin: "https://www.linkedin.com/in/ime-edet-960926223/",
   github: "https://github.com/ImeEdet",
-  cvPath: "/EDET_IME_AKANIMO_CV_3.docx",
-  pdfPath: "/Ime-Akanimo-Edet-CV.pdf",
+  cvPath: "/Ime-Akanimo-Edet-CV-v2.pdf",
+  pdfPath: "/Ime-Akanimo-Edet-CV-v2.pdf",
 };

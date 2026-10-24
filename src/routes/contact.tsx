@@ -100,7 +100,7 @@ function ContactPage() {
             </div>
             <a
               href={contact.cvPath}
-              download="Ime-Akanimo-Edet-CV.docx"
+              download="Ime-Akanimo-Edet-CV.pdf"
               className="btn bg-lavender text-primary-foreground hover:bg-lavender-soft hover:text-lavender-deep"
             >
               <Download className="h-4 w-4" />
