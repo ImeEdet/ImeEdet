@@ -89,21 +89,23 @@ function Index() {
             </div>
           </div>
 
-          {/* Elegant monogram composition — no photograph needed */}
-          <div className="relative mx-auto hidden w-full max-w-sm lg:block" aria-hidden="true">
+          {/* Portrait composition */}
+          <div className="relative mx-auto hidden w-full max-w-sm lg:block">
             <div className="relative aspect-square">
               <div className="absolute inset-6 rounded-[3rem] bg-primary" />
-              <div className="absolute inset-6 overflow-hidden rounded-[3rem]">
-                <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-lavender opacity-70" />
-                <div className="absolute bottom-8 left-8 h-24 w-24 rounded-full bg-teal opacity-80" />
-                <div className="absolute bottom-16 right-10 h-2 w-16 rounded-full bg-lavender-soft" />
-                <div className="absolute bottom-24 right-10 h-2 w-10 rounded-full bg-teal-soft" />
+              <div className="absolute inset-6 overflow-hidden rounded-[3rem] shadow-2xl shadow-primary/20">
+                <img
+                  src="/IMG_5131.JPG"
+                  alt="Ime Akanimo Edet smiling outdoors"
+                  width={704}
+                  height={1024}
+                  fetchPriority="high"
+                  className="h-full w-full object-cover object-[center_18%] transition-transform duration-700 hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/35 via-transparent to-transparent" />
               </div>
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <span className="font-display text-8xl font-medium italic text-primary-foreground">
-                  ie
-                </span>
-              </div>
+              <div className="absolute -right-3 -top-3 h-20 w-20 rounded-full border-[10px] border-teal-soft/90" />
+              <div className="absolute bottom-8 left-8 h-16 w-16 rounded-full bg-lavender/70 blur-sm" />
               <div className="absolute -bottom-5 -left-5 rounded-2xl bg-card px-5 py-4 shadow-lg shadow-foreground/10">
                 <p className="text-xs font-bold uppercase tracking-widest text-lavender-deep">
                   Class of 2025
