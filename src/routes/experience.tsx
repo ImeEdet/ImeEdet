@@ -74,6 +74,7 @@ function ExperiencePage() {
                   {item.role}
                 </h2>
                 <p className="mt-1 font-semibold text-lavender-deep">{item.company}</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">{item.location}</p>
 
                 <ul className="mt-4 space-y-2.5">
                   {item.bullets.map((bullet) => (

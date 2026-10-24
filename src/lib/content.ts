@@ -5,21 +5,25 @@
 
 export const profile = {
   name: "Ime Akanimo Edet",
-  roles: "Software Engineering Graduate | Customer Service | IT Support | Creative Developer",
+  roles: "Software Engineering Graduate | IT Support | Customer Service | Creative Developer",
   intro:
-    "I'm a Software Engineering graduate who enjoys solving problems, communicating with people, and creating useful digital experiences. My background combines technical knowledge, customer-facing experience, and a passion for learning.",
+    "I'm a Software Engineering graduate with experience in IT support, customer service, technical instruction, and team leadership. I enjoy solving problems, helping people, and exploring creative ways to use technology. My interests include front-end development, artificial intelligence, machine learning, and building practical digital experiences.",
 };
 
 export const aboutParagraphs = [
-  "I hold a Bachelor of Science in Software Engineering from Topfaith University, Nigeria (2025), and my journey so far has stretched across IT operations, customer service, technical support, and teaching. Each role taught me something different — how systems work, how people think, and how to keep calm and helpful when things go wrong.",
-  "Outside of formal work, I enjoy exploring technology and building creative applications. I'm drawn to language learning, fiction writing, and digital creativity — and I love projects where logic meets imagination.",
-  "The values that guide me are simple: adaptability, problem-solving, communication, and continuous learning. I care about doing things properly, explaining things clearly, and always leaving room to grow.",
+  "I'm a Software Engineering graduate who enjoys exploring the intersection of technology, creativity, and communication.",
+  "My professional experience spans IT support, customer service, and technical instruction, while my personal projects allow me to experiment with application development and digital experiences.",
+  "Outside technology, I enjoy creative writing, worldbuilding, reading, and learning languages.",
 ];
+
+export const aboutBeyondWork =
+  "Creative writing, worldbuilding, reading, and language learning keep me experimenting — they sharpen the same skills I bring to building useful software.";
 
 export type ExperienceItem = {
   company: string;
   role: string;
   period: string;
+  location: string;
   bullets: string[];
   current?: boolean;
 };
@@ -29,40 +33,47 @@ export const experience: ExperienceItem[] = [
     company: "Niger Delta Development Commission (NDDC)",
     role: "Corps Member — IT Department",
     period: "February 2026 – Present",
+    location: "Port Harcourt, Nigeria",
     current: true,
     bullets: [
-      "Provide technical support to staff.",
-      "Troubleshoot software, hardware, and network issues.",
-      "Support IT operations and supervise interns.",
+      "Provide tier-one and tier-two IT support to staff.",
+      "Troubleshoot hardware, software, and network issues.",
+      "Assist with daily IT operations and equipment maintenance.",
+      "Supervise NYSC and industrial training interns.",
+      "Support internal reporting procedures.",
     ],
   },
   {
     company: "Start Innovation Hub",
     role: "Team Lead — Developer Interns",
     period: "August 2025 – November 2025",
+    location: "Uyo, Nigeria",
     bullets: [
-      "Mentored junior developers.",
-      "Guided interns through Python programming.",
+      "Mentored junior developer interns in Python and software engineering fundamentals.",
       "Conducted code reviews and technical problem-solving sessions.",
+      "Provided feedback and guidance to support skill development.",
     ],
   },
   {
     company: "National Identity Management Commission (NIMC)",
     role: "Customer Service Intern",
     period: "March 2024 – August 2024",
+    location: "Akwa Ibom State, Nigeria",
     bullets: [
-      "Assisted hundreds of applicants with NIN registration and verification.",
-      "Responded to customer inquiries and resolved complaints.",
-      "Explained documentation requirements and registration procedures.",
+      "Assisted hundreds of applicants with NIN registration, verification, and data updates.",
+      "Responded to inquiries and explained documentation requirements.",
+      "Handled customer complaints professionally.",
+      "Maintained accuracy during data capture and verification.",
     ],
   },
   {
     company: "Start Innovation Hub",
     role: "Customer Service & Instructor Intern",
     period: "August 2023 – December 2023",
+    location: "Uyo, Nigeria",
     bullets: [
       "Taught introductory HTML and CSS.",
-      "Responded to customer inquiries.",
+      "Handled customer inquiries and front-facing communications.",
       "Conducted follow-up calls with prospective customers.",
     ],
   },
@@ -71,11 +82,20 @@ export const experience: ExperienceItem[] = [
 export const education = {
   school: "Topfaith University",
   degree: "Bachelor of Science in Software Engineering",
-  years: "2021 – 2025",
+  years: "November 2021 – July 2025",
+  areas: [
+    "Software Engineering",
+    "Machine Learning",
+    "Data Structures and Algorithms",
+    "Computer Networks",
+    "Software Architecture",
+    "Project Management",
+  ],
 };
 
 export type Project = {
   title: string;
+  category: string;
   description: string;
   demoUrl: string;
   image?: string;
@@ -84,15 +104,24 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "XYZ Foods",
+    category: "Restaurant Application Demo",
     description:
-      "A restaurant application demo created using Lovable, demonstrating digital food-service application design.",
+      "Originally developed for a friend's project concept, XYZ Foods has become an ongoing personal development project. I continue to refine its design, explore new ideas, and improve the overall user experience.",
     demoUrl: "https://xyzfoods.lovable.app",
     image: "/project-xyz-foods.png",
   },
   {
-    title: "Story Muse Magic",
+    title: "Drift Connect",
+    category: "Logistics Application Prototype",
     description:
-      "A creative writing application designed to support storytelling, brainstorming, and idea generation.",
+      "A logistics application demo developed from a friend's project concept, translating an initial idea into a published digital prototype.",
+    demoUrl: "https://driftlogistics.lovable.app",
+  },
+  {
+    title: "Story Muse Magic",
+    category: "Creative Writing Application",
+    description:
+      "A creative writing application exploring storytelling, brainstorming, and idea generation. Inspired by my interest in fiction writing and worldbuilding.",
     demoUrl: "https://story-muse-magic.lovable.app",
     image: "/project-story-muse.png",
   },
@@ -100,42 +129,42 @@ export const projects: Project[] = [
 
 export const skillCategories: { title: string; blurb: string; skills: string[] }[] = [
   {
-    title: "Customer & Communication",
+    title: "Customer Service & Communication",
     blurb: "Making every interaction count",
     skills: [
-      "Customer Service",
+      "Customer Support",
       "Customer Inquiries",
       "Prospect Follow-Up Calls",
       "Complaint Resolution",
-      "Effective Communication",
+      "Communication",
     ],
   },
   {
-    title: "Technical",
+    title: "IT & Technical Support",
     blurb: "Building and keeping things running",
     skills: [
-      "Python",
-      "HTML & CSS",
-      "IT Support",
-      "Troubleshooting",
+      "Hardware and Software Troubleshooting",
+      "Network Support",
+      "IT Operations",
+      "Data Capture and Verification",
       "Microsoft Office",
-      "Data Capture & Verification",
+    ],
+  },
+  {
+    title: "Development",
+    blurb: "Bringing ideas to life",
+    skills: [
+      "Python",
+      "HTML",
+      "CSS",
+      "Front-End Development",
+      "AI-Assisted Application Prototyping",
     ],
   },
   {
     title: "Leadership",
     blurb: "Helping others do their best work",
-    skills: ["Team Mentorship", "Problem-Solving", "Technical Instruction", "Collaboration"],
-  },
-  {
-    title: "Creative",
-    blurb: "Where logic meets imagination",
-    skills: [
-      "Application Prototyping",
-      "Creative Writing",
-      "Digital Storytelling",
-      "AI-Assisted Development",
-    ],
+    skills: ["Team Mentorship", "Technical Instruction", "Collaboration", "Problem-Solving"],
   },
 ];
 
@@ -144,10 +173,7 @@ export const contact = {
   message:
     "I'm always open to connecting, collaborating, and exploring opportunities where I can contribute my skills and continue learning.",
   email: "menobltd@gmail.com",
-  // Replace these empty values with full profile URLs when ready, e.g.
-  // linkedin: "https://www.linkedin.com/in/your-handle"
-  linkedin: "",
-  github: "",
-  // Replace public/Ime-Edet-CV.pdf with an updated PDF using the same file name.
+  linkedin: "https://www.linkedin.com/in/ime-edet-960926223/",
+  github: "https://github.com/ImeEdet",
   cvPath: "/Ime-Edet-CV.pdf",
 };

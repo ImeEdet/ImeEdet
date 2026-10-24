@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GraduationCap, HeartHandshake, Lightbulb, PenLine } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
-import { aboutParagraphs, education } from "@/lib/content";
+import { aboutParagraphs, aboutBeyondWork, education } from "@/lib/content";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -74,14 +74,23 @@ function AboutPage() {
               <div className="px-6 py-6">
                 <p className="font-semibold text-foreground">{education.degree}</p>
                 <p className="mt-1 text-sm font-medium text-muted-foreground">{education.years}</p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {education.areas.map((area) => (
+                    <li
+                      key={area}
+                      className="chip bg-teal-soft text-teal-deep"
+                    >
+                      {area}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
             <div className="mt-6 rounded-2xl bg-teal-soft p-6">
               <p className="font-display text-lg font-semibold text-teal-deep">Beyond work</p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-                Language learning, fiction writing, and digital creativity keep me experimenting —
-                they sharpen the same skills I bring to building useful software.
+                {aboutBeyondWork}
               </p>
             </div>
           </aside>

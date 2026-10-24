@@ -49,43 +49,41 @@ function ContactPage() {
           </span>
         </a>
 
-        {/* Social profiles — placeholders until real links are added */}
+        {/* Social profiles */}
         <div className="mt-5 grid gap-5 sm:grid-cols-2">
-          <div className="card-soft flex items-center gap-5 p-6 sm:p-7">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-lavender-soft text-lavender-deep">
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-soft group flex items-center gap-5 p-6 sm:p-7 transition-transform hover:-translate-y-1"
+          >
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-lavender-soft text-lavender-deep transition-colors group-hover:bg-lavender-deep group-hover:text-primary-foreground">
               <Linkedin className="h-5 w-5" aria-hidden="true" />
             </span>
-            <div>
+            <div className="min-w-0">
               <p className="font-semibold text-foreground">LinkedIn</p>
-              <p className="text-sm text-muted-foreground">
-                {contact.linkedin ? (
-                  <a href={contact.linkedin} className="underline underline-offset-2">
-                    Visit profile
-                  </a>
-                ) : (
-                  "Profile link coming soon"
-                )}
+              <p className="truncate text-sm text-muted-foreground group-hover:text-lavender-deep">
+                Visit profile
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="card-soft flex items-center gap-5 p-6 sm:p-7">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-deep">
+          <a
+            href={contact.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-soft group flex items-center gap-5 p-6 sm:p-7 transition-transform hover:-translate-y-1"
+          >
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-deep transition-colors group-hover:bg-teal-deep group-hover:text-primary-foreground">
               <Github className="h-5 w-5" aria-hidden="true" />
             </span>
-            <div>
+            <div className="min-w-0">
               <p className="font-semibold text-foreground">GitHub</p>
-              <p className="text-sm text-muted-foreground">
-                {contact.github ? (
-                  <a href={contact.github} className="underline underline-offset-2">
-                    Visit profile
-                  </a>
-                ) : (
-                  "Profile link coming soon"
-                )}
+              <p className="truncate text-sm text-muted-foreground group-hover:text-teal-deep">
+                Visit profile
               </p>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* CV download */}

@@ -148,7 +148,7 @@ function Index() {
             <Mail className="h-4 w-4" />
             Email Me
           </a>
-          <a href="/Ime-Edet-CV.pdf" download className="btn btn-lavender">
+          <a href={contact.cvPath} download className="btn btn-lavender">
             <Download className="h-4 w-4" />
             Download CV
           </a>

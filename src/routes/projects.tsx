@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Package } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { projects } from "@/lib/content";
 
@@ -13,13 +13,13 @@ export const Route = createFileRoute("/projects")({
       {
         name: "description",
         content:
-          "Featured projects by Ime Akanimo Edet — XYZ Foods restaurant application demo and Story Muse Magic creative writing application.",
+          "Featured projects by Ime Akanimo Edet — XYZ Foods restaurant app, Drift Connect logistics prototype, and Story Muse Magic creative writing application.",
       },
       { property: "og:title", content: "Projects | Ime Akanimo Edet" },
       {
         property: "og:description",
         content:
-          "Featured projects: XYZ Foods restaurant app demo and Story Muse Magic creative writing application.",
+          "Featured projects: XYZ Foods restaurant app, Drift Connect logistics prototype, and Story Muse Magic creative writing application.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -50,18 +50,25 @@ function ProjectsPage() {
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <article key={project.title} className="card-soft group overflow-hidden">
-              <div className="overflow-hidden border-b border-border bg-secondary/40">
-                <img
-                  src={projectImages[project.title]}
-                  alt={`${project.title} application preview`}
-                  width={1024}
-                  height={1024}
-                  loading="lazy"
-                  className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-              </div>
+              {projectImages[project.title] ? (
+                <div className="overflow-hidden border-b border-border bg-secondary/40">
+                  <img
+                    src={projectImages[project.title]}
+                    alt={`${project.title} application preview`}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-[16/10] items-center justify-center border-b border-border bg-secondary/40">
+                  <Package className="h-12 w-12 text-muted-foreground/50" aria-hidden="true" />
+                </div>
+              )}
               <div className="p-6 sm:p-7">
-                <h2 className="font-display text-2xl font-semibold tracking-tight">
+                <p className="eyebrow">{project.category}</p>
+                <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">
                   {project.title}
                 </h2>
                 <p className="mt-2 leading-relaxed text-muted-foreground">
