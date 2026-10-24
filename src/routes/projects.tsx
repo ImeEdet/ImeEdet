@@ -3,9 +3,6 @@ import { ExternalLink, Package } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { projects } from "@/lib/content";
 
-import xyzFoodsImage from "@/assets/project-xyz-foods.png";
-import storyMuseImage from "@/assets/project-story-muse.png";
-
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
@@ -28,12 +25,10 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
 });
 
-// Map project titles to their cover images. To add a new project later:
-// 1. Add an entry to `projects` in src/lib/content.ts
-// 2. Drop a cover image into src/assets and reference it here.
 const projectImages: Record<string, string> = {
-  "XYZ Foods": xyzFoodsImage,
-  "Story Muse Magic": storyMuseImage,
+  "XYZ Foods": "/images/xyz-foods/Screenshot_2026-10-24_215443.png",
+  "Drift Connect": "/images/drift-logistics/Screenshot_2026-10-24_215530.png",
+  "Story Muse Magic": "/images/story-muse/Screenshot_2026-10-24_215955.png",
 };
 
 function ProjectsPage() {
