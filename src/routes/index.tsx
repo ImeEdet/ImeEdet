@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, ExternalLink, Mail } from "lucide-react";
+import { ArrowRight, ExternalLink, Mail } from "lucide-react";
 import { contact, profile, projects } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
@@ -207,9 +207,14 @@ function Index() {
             <Mail className="h-4 w-4" />
             Email Me
           </a>
-          <a href={contact.cvPath} download="Ime-Akanimo-Edet-CV.pdf" className="btn btn-lavender">
-            <Download className="h-4 w-4" />
-            Download CV
+          <a
+            href={contact.pdfPath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-lavender w-full sm:w-auto"
+          >
+            <ExternalLink className="h-4 w-4" />
+            View PDF
           </a>
         </div>
       </section>

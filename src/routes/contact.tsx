@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ExternalLink, Github, Linkedin, Mail, Sparkles } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { contact } from "@/lib/content";
 
@@ -86,7 +86,7 @@ function ContactPage() {
           </a>
         </div>
 
-        {/* CV download */}
+        {/* CV link */}
         <div className="mt-5 overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground sm:p-8">
           <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="flex items-center gap-4">
@@ -99,19 +99,12 @@ function ContactPage() {
               </div>
             </div>
             <a
-              href={contact.cvPath}
-              download="Ime-Akanimo-Edet-CV.pdf"
-              className="btn bg-lavender text-primary-foreground hover:bg-lavender-soft hover:text-lavender-deep"
-            >
-              <Download className="h-4 w-4" />
-              Download CV
-            </a>
-            <a
               href={contact.pdfPath}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-primary-foreground underline-offset-4 hover:underline"
+              className="btn bg-lavender text-primary-foreground hover:bg-lavender-soft hover:text-lavender-deep"
             >
+              <ExternalLink className="h-4 w-4" />
               View PDF
             </a>
           </div>
