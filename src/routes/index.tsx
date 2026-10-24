@@ -101,7 +101,7 @@ function Index() {
               </div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <span className="font-display text-8xl font-medium italic text-primary-foreground">
-                  ie
+                  Aimee
                 </span>
               </div>
               <div className="absolute -bottom-5 -left-5 rounded-2xl bg-card px-5 py-4 shadow-lg shadow-foreground/10">
