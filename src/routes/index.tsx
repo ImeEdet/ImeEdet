@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, Mail } from "lucide-react";
-import { profile, contact } from "@/lib/content";
+import { ArrowRight, Download, ExternalLink, Mail } from "lucide-react";
+import { contact, profile, projects } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,6 +23,12 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+const projectImages: Record<string, string> = {
+  "XYZ Foods": "/images/xyz-foods/Screenshot_2026-10-24_215443.png",
+  "Drift Connect": "/images/drift-logistics/Screenshot_2026-10-24_215530.png",
+  "Story Muse Magic": "/images/story-muse/Screenshot_2026-10-24_215955.png",
+};
 
 const highlights = [
   {
@@ -70,14 +76,14 @@ function Index() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link to="/projects" className="btn btn-primary group">
+              <Link to="/projects" className="btn btn-primary group w-full sm:w-auto">
                 View My Projects
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <Link to="/experience" className="btn btn-outline">
+              <Link to="/experience" className="btn btn-outline w-full sm:w-auto">
                 Explore My Experience
               </Link>
-              <Link to="/contact" className="btn btn-lavender">
+              <Link to="/contact" className="btn btn-lavender w-full sm:w-auto">
                 Contact Me
               </Link>
             </div>
@@ -105,6 +111,59 @@ function Index() {
                 <p className="mt-1 font-display text-lg font-semibold">B.Sc. Software Engineering</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured work */}
+      <section className="border-y border-border/70 bg-secondary/50">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="eyebrow">Featured work</p>
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+                Built to be useful and memorable
+              </h2>
+            </div>
+            <Link to="/projects" className="text-sm font-bold text-teal-deep transition-colors hover:text-lavender-deep">
+              See all projects <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {projects.map((project) => (
+              <a
+                key={project.title}
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-soft group overflow-hidden transition-transform hover:-translate-y-1"
+              >
+                <div className="overflow-hidden border-b border-border bg-background">
+                  <img
+                    src={projectImages[project.title]}
+                    alt={`${project.title} application preview`}
+                    width={1536}
+                    height={960}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-xl font-semibold tracking-tight">{project.title}</h3>
+                    <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="chip bg-teal-soft text-teal-deep">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -138,17 +197,17 @@ function Index() {
           Curious about the work?
         </h2>
         <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
-          Take a look at the projects I've built, or get in touch — I'd love to hear from you.
+          I’m open to software, IT support, and customer-facing technology opportunities.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link to="/projects" className="btn btn-primary">
+          <Link to="/projects" className="btn btn-primary w-full sm:w-auto">
             Browse Projects
           </Link>
-          <a href={`mailto:${contact.email}`} className="btn btn-outline">
+          <a href={`mailto:${contact.email}`} className="btn btn-outline w-full sm:w-auto">
             <Mail className="h-4 w-4" />
             Email Me
           </a>
-          <a href={contact.cvPath} download className="btn btn-lavender">
+          <a href={contact.cvPath} download="Ime-Akanimo-Edet-CV.pdf" className="btn btn-lavender">
             <Download className="h-4 w-4" />
             Download CV
           </a>

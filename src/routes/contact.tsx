@@ -92,13 +92,17 @@ function ContactPage() {
             <div className="flex items-center gap-4">
               <Sparkles className="h-7 w-7 text-lavender" aria-hidden="true" />
               <div>
-                <p className="font-display text-xl font-semibold">Want the full picture?</p>
+                <p className="font-display text-xl font-semibold">Open to the next opportunity</p>
                 <p className="text-sm text-primary-foreground/80">
-                  Download my CV for the complete overview.
+                  I’m available for software, IT support, and customer-facing technology roles.
                 </p>
               </div>
             </div>
-            <a href={contact.cvPath} download className="btn bg-lavender text-primary-foreground hover:bg-lavender-soft hover:text-lavender-deep">
+            <a
+              href={contact.cvPath}
+              download="Ime-Akanimo-Edet-CV.pdf"
+              className="btn bg-lavender text-primary-foreground hover:bg-lavender-soft hover:text-lavender-deep"
+            >
               <Download className="h-4 w-4" />
               Download CV
             </a>

@@ -50,8 +50,8 @@ function ProjectsPage() {
                   <img
                     src={projectImages[project.title]}
                     alt={`${project.title} application preview`}
-                    width={1024}
-                    height={1024}
+                    width={1536}
+                    height={960}
                     loading="lazy"
                     className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
@@ -66,7 +66,14 @@ function ProjectsPage() {
                 <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">
                   {project.title}
                 </h2>
-                <p className="mt-2 leading-relaxed text-muted-foreground">
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="chip bg-teal-soft text-teal-deep">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
                 <a

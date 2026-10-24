@@ -98,6 +98,7 @@ export type Project = {
   category: string;
   description: string;
   demoUrl: string;
+  tags: string[];
   image?: string;
 };
 
@@ -108,7 +109,8 @@ export const projects: Project[] = [
     description:
       "Originally developed for a friend's project concept, XYZ Foods has become an ongoing personal development project. I continue to refine its design, explore new ideas, and improve the overall user experience.",
     demoUrl: "https://xyzfoods.lovable.app",
-    image: "/project-xyz-foods.png",
+    tags: ["Front-end Web Development", "AI"],
+    image: "/images/xyz-foods/Screenshot_2026-10-24_215443.png",
   },
   {
     title: "Drift Connect",
@@ -116,6 +118,8 @@ export const projects: Project[] = [
     description:
       "A logistics application demo developed from a friend's project concept, translating an initial idea into a published digital prototype.",
     demoUrl: "https://driftlogistics.lovable.app",
+    tags: ["Front-end Web Development", "AI"],
+    image: "/images/drift-logistics/Screenshot_2026-10-24_215530.png",
   },
   {
     title: "Story Muse Magic",
@@ -123,7 +127,8 @@ export const projects: Project[] = [
     description:
       "A creative writing application exploring storytelling, brainstorming, and idea generation. Inspired by my interest in fiction writing and worldbuilding.",
     demoUrl: "https://story-muse-magic.lovable.app",
-    image: "/project-story-muse.png",
+    tags: ["Front-end Web Development", "AI"],
+    image: "/images/story-muse/Screenshot_2026-10-24_215955.png",
   },
 ];
 
@@ -175,5 +180,5 @@ export const contact = {
   email: "menobltd@gmail.com",
   linkedin: "https://www.linkedin.com/in/ime-edet-960926223/",
   github: "https://github.com/ImeEdet",
-  cvPath: "/Ime-Edet-CV.pdf",
+  cvPath: "/Ime-Akanimo-Edet-CV.pdf",
 };
