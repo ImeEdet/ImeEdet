@@ -109,7 +109,7 @@ export const projects: Project[] = [
     description:
       "Originally developed for a friend's project concept, XYZ Foods has become an ongoing personal development project. I continue to refine its design, explore new ideas, and improve the overall user experience.",
     demoUrl: "https://xyzfoods.lovable.app",
-    tags: ["Front-end Web Development", "AI"],
+    tags: ["Front-end Web Development", "AI", "Restaurant Menu"],
     image: "/images/xyz-foods/Screenshot_2026-10-24_215443.png",
   },
   {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     description:
       "A logistics application demo developed from a friend's project concept, translating an initial idea into a published digital prototype.",
     demoUrl: "https://driftlogistics.lovable.app",
-    tags: ["Front-end Web Development", "AI"],
+    tags: ["Front-end Web Development", "AI", "Logistics"],
     image: "/images/drift-logistics/Screenshot_2026-10-24_215530.png",
   },
   {
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     description:
       "A creative writing application exploring storytelling, brainstorming, and idea generation. Inspired by my interest in fiction writing and worldbuilding.",
     demoUrl: "https://story-muse-magic.lovable.app",
-    tags: ["Front-end Web Development", "AI"],
+    tags: ["Front-end Web Development", "AI", "Creative Writing"],
     image: "/images/story-muse/Screenshot_2026-10-24_215955.png",
   },
 ];
