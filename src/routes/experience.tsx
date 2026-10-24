@@ -65,7 +65,7 @@ function ExperiencePage() {
                         : "bg-lavender-soft text-lavender-deep")
                     }
                   >
-                    {item.current ? "Current role" : item.period}
+                    {item.current ? "Current role" : item.period.slice(-4)}
                   </span>
                   <span className="text-sm font-medium text-muted-foreground">{item.period}</span>
                 </div>
