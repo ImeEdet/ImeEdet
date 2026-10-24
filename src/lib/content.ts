@@ -179,7 +179,7 @@ export const contact = {
     "I'm always open to connecting, collaborating, and exploring opportunities where I can contribute my skills and continue learning.",
   email: "menobltd@gmail.com",
   linkedin: "https://www.linkedin.com/in/ime-edet-960926223/",
-  github: "https://github.com/ImeEdet",
+  github: "https://github.com/ImeEdet/ImeEdet",
   cvPath: "/Ime-Akanimo-Edet-CV-v2.pdf",
   pdfPath: "/Ime-Akanimo-Edet-CV-v2.pdf",
 };
